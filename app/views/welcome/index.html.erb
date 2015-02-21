@@ -48,7 +48,13 @@
       <div class="starter-template"> 
 
 <h1>Hello, Rails!</h1>
-<h4>Click here to
+<h4>
+    <% @friends.each do |friend| %>
+      <%= friend %>
+    <% end %>
+
+
+  Click here to
   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        <br><br>
       </h4>
 

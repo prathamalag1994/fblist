@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
+gem "koala", "~> 1.11.0rc"
+gem "fb_graph", ">=1.6.5"
 
 
 # Use ActiveModel has_secure_password
