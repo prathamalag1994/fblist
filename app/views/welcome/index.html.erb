@@ -47,10 +47,28 @@
 
       <div class="starter-template"> 
 
-<h1>Hello, Rails!</h1>
+<h1>Here are the events that you have to look forward to:</h1>
 <h4>
-    <% @friends.each do |friend| %>
-      <%= friend %>
+  <table>
+  <tr>
+    <th>Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th>Event&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th>RSVP&nbsp;&nbsp;&nbsp;</th>
+    <th>Location&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+    <% @events.each do |event| %>
+      
+      <% if event["rsvp_status"] == "attending" %>
+      <tr style="color:green;">
+      <% else %>
+      <tr style="color:orange;">
+      <% end %>
+      <td><%= event["start_time"] %>&nbsp;&nbsp;</td>
+      <td><%= event["name"] %>&nbsp;&nbsp;&nbsp;</td>
+      <td><%= event["rsvp_status"] %>&nbsp;&nbsp;&nbsp;</td>
+      <td><%= event["location"] %>&nbsp;&nbsp;&nbsp;</td>      
+    </tr> </font> 
+    
     <% end %>
 
 

@@ -5,11 +5,11 @@ class WelcomeController < ApplicationController
 
 
   def index
-  	#oauth = Koala::Facebook::OAuth.new(ENV["1528582454074095"], ENV["8133e2fc26bb995d7d4eb4d4b6ab7fd9"])
-  	oauth_access_token = 'CAACEdEose0cBABkdp3JZCDSyZAApRNEZAtPrDcw8Tck3sk1guEUMJ6Bdb0cUVUKmfTeVwbM3HiQpePZCmZB2GhJ124aW9HNvzZB7JwHP4tLFVvQvuFRiKw7VV9ntf7ZB3NBVtZCUHEicbGowmZCu1JtWtGrOott5amZB2GTKJFAiyOAkrqQOzF1QLLSONY3vZAIsCFAruIcTgiuA306IfRWyZCCk4cgwlKDJKaoZD'
+  	oauth = Koala::Facebook::OAuth.new(ENV["1528582454074095"], ENV["8133e2fc26bb995d7d4eb4d4b6ab7fd9"])
+  	oauth_access_token = 'CAACEdEose0cBACvE9Iijf1WdZB2AT3uH7NFh44Y3iY9y4Fiu9Ij1E3IfGvptKoH9m2G4PZCOo7EZBefaJQksBBu7P4seI5BNQdJ7wC50DstwZCIPiXqjZBaW8Tsm9tJXad0EbM0yZAfJxZBSVfbYYKo0xDZClkKtBUKtoYv8EbKlyL4bkpDwYOYvKwlh102GwGlh8G1WrGrbs3Qi13yBVHC15Hk1W6XvoXUZD'
 
 	@graph = Koala::Facebook::API.new(oauth_access_token)
-  	@friends = @graph.get_connections("me", "events")
+  	@events = @graph.get_connections("me", "events")
 
   end
 end
