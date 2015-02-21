@@ -13,3 +13,11 @@ test:
   pool: 5
   username: fblist
   password: password1
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: dai665s2soe2t
+  pool: 5
+  username: swtzvioziywtsi
+  password: soMSGDOB_70tFiZSbEVnyvaz4C
