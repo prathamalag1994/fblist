@@ -6,7 +6,7 @@ class WelcomeController < ApplicationController
 
   def index
   	oauth = Koala::Facebook::OAuth.new(ENV["1528582454074095"], ENV["8133e2fc26bb995d7d4eb4d4b6ab7fd9"])
-  	oauth_access_token = 'CAACEdEose0cBAKZCqm7LvyMqw5DWQVEN9XKHG3L39jBgLn6HWqwoVUVhMmav05Vz14DX9EZBsuIvUtVBRPWGCMNqiS2gTZCYlUePctqDMzNxrifhQVjQuTMQN1R8y5lxxV2pnI4QrQ7P7qFoPf8eZCoHUW37sI4Er5h2L43vrULnfA0Ho8ogaAmAEsFd91KMUKcAvYaIq63Ej4uX91WGQV0WAXdHyb8ZD'
+  	oauth_access_token = 'CAACEdEose0cBAE787pCHM1yTx3P8Oa03ZATooKZB2n97ZCFVxxzUzYc77rsxoBt6WuLpOwCs8lZBwQlasfajZCTjTeZAsCCVUioBfn9zcln8jStNZBuz02JA3wkaPJR1rhnx20lvsqVPzhUZCyZAhkPJaGFguVejjzvQlA6NveofyVE6x1r97tBAmP2KzpdwEK5s4EzCu0HB6z7BgZALlwU4QSV78G43yNZAbsZD'
 
 	@graph = Koala::Facebook::API.new(oauth_access_token)
   	@events = @graph.get_connections("me", "events")
